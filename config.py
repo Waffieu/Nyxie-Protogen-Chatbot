@@ -43,12 +43,19 @@ GEMINI_TOP_K = 40
 GEMINI_MAX_OUTPUT_TOKENS = 2048  # Reduced max tokens to encourage shorter responses
 
 # Specialized Gemini models
-# Model for web search, language detection, and media analysis
+# Model for web search and language detection
 GEMINI_FLASH_LITE_MODEL = "gemini-2.0-flash-lite"
 GEMINI_FLASH_LITE_TEMPERATURE = 0.4
 GEMINI_FLASH_LITE_TOP_P = 0.95
 GEMINI_FLASH_LITE_TOP_K = 32
 GEMINI_FLASH_LITE_MAX_OUTPUT_TOKENS = 8192
+
+# Model for image analysis
+GEMINI_IMAGE_MODEL = "gemini-2.5-flash-preview-04-17"
+GEMINI_IMAGE_TEMPERATURE = 0.7
+GEMINI_IMAGE_TOP_P = 0.95
+GEMINI_IMAGE_TOP_K = 40
+GEMINI_IMAGE_MAX_OUTPUT_TOKENS = 4096
 
 # Safety settings - all set to BLOCK_NONE as requested
 SAFETY_SETTINGS = [

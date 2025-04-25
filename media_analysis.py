@@ -31,14 +31,14 @@ async def analyze_image(image_path: str) -> Dict[str, Any]:
         Dictionary containing analysis results
     """
     try:
-        # Configure Gemini model
+        # Configure Gemini model for image analysis
         model = genai.GenerativeModel(
-            model_name=config.GEMINI_FLASH_LITE_MODEL,
+            model_name=config.GEMINI_IMAGE_MODEL,
             generation_config={
-                "temperature": config.GEMINI_FLASH_LITE_TEMPERATURE,
-                "top_p": config.GEMINI_FLASH_LITE_TOP_P,
-                "top_k": config.GEMINI_FLASH_LITE_TOP_K,
-                "max_output_tokens": config.GEMINI_FLASH_LITE_MAX_OUTPUT_TOKENS,
+                "temperature": config.GEMINI_IMAGE_TEMPERATURE,
+                "top_p": config.GEMINI_IMAGE_TOP_P,
+                "top_k": config.GEMINI_IMAGE_TOP_K,
+                "max_output_tokens": config.GEMINI_IMAGE_MAX_OUTPUT_TOKENS,
             },
             safety_settings=config.SAFETY_SETTINGS
         )
@@ -87,14 +87,14 @@ async def analyze_video(video_path: str) -> Dict[str, Any]:
         # Extract frames from the video (simplified approach - just analyze first frame)
         # In a production environment, you would extract multiple frames and analyze them
 
-        # Configure Gemini model
+        # Configure Gemini model for video analysis
         model = genai.GenerativeModel(
-            model_name=config.GEMINI_FLASH_LITE_MODEL,
+            model_name=config.GEMINI_IMAGE_MODEL,
             generation_config={
-                "temperature": config.GEMINI_FLASH_LITE_TEMPERATURE,
-                "top_p": config.GEMINI_FLASH_LITE_TOP_P,
-                "top_k": config.GEMINI_FLASH_LITE_TOP_K,
-                "max_output_tokens": config.GEMINI_FLASH_LITE_MAX_OUTPUT_TOKENS,
+                "temperature": config.GEMINI_IMAGE_TEMPERATURE,
+                "top_p": config.GEMINI_IMAGE_TOP_P,
+                "top_k": config.GEMINI_IMAGE_TOP_K,
+                "max_output_tokens": config.GEMINI_IMAGE_MAX_OUTPUT_TOKENS,
             },
             safety_settings=config.SAFETY_SETTINGS
         )

@@ -32,7 +32,8 @@ logger = logging.getLogger(__name__)
 # Log startup information
 logger.info("Starting Nyxie Bot with DuckDuckGo web search integration")
 logger.info(f"Using Gemini model: {config.GEMINI_MODEL}")
-logger.info(f"Using Gemini Flash Lite model for web search, language detection, and media analysis: {config.GEMINI_FLASH_LITE_MODEL}")
+logger.info(f"Using Gemini Flash Lite model for web search and language detection: {config.GEMINI_FLASH_LITE_MODEL}")
+logger.info(f"Using Gemini model for image and video analysis: {config.GEMINI_IMAGE_MODEL}")
 logger.info(f"Short memory size: {config.SHORT_MEMORY_SIZE}, Long memory size: {config.LONG_MEMORY_SIZE}")
 logger.info(f"Max search results: {config.MAX_SEARCH_RESULTS}")
 

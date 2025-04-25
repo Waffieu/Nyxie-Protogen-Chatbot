@@ -1,6 +1,6 @@
 # Nyxie Telegram Bot
 
-A Telegram chatbot featuring Nyxie, a protogen-fox hybrid character, powered by Google's Gemini AI model.
+A Telegram chatbot featuring Nyxie, a protogen-fox hybrid character, powered by Google's Gemini AI models.
 
 ## Features
 
@@ -8,6 +8,10 @@ A Telegram chatbot featuring Nyxie, a protogen-fox hybrid character, powered by 
 - **Typing Indicator**: Shows typing animation while generating responses
 - **Web Search Capabilities**:
   - **Automatic Web Search**: Automatically searches the web for every query to provide accurate information
+- **Advanced Media Analysis**:
+  - Uses gemini-2.5-flash-preview-04-17 model for image and video analysis
+  - Provides detailed descriptions of images and videos
+  - Generates relevant search queries based on media content
 
 - **Persistent Memory System**:
   - Short-term memory (25 messages) for immediate context
@@ -114,8 +118,17 @@ No commands are currently available. Simply chat with the bot normally and it wi
 - Customize language detection in `language_detection.py`
 - Edit welcome messages and error responses in `main.py`
 
+## AI Models Used
+
+This bot uses multiple specialized Gemini models for different tasks:
+
+- **Main Conversation**: gemini-2.5-flash-preview-04-17 - Handles the primary conversation with users
+- **Image/Video Analysis**: gemini-2.5-flash-preview-04-17 - Processes and describes images and videos
+- **Web Search & Language Detection**: gemini-2.0-flash-lite - Handles web search queries and language detection
+
 ## Recent Updates
 
+- **Enhanced Image Analysis**: Now using gemini-2.5-flash-preview-04-17 model specifically for image and video analysis
 - **Personality Change**: Changed from Puro to Nyxie, a protogen-fox hybrid character
 - **Language Improvements**: Enhanced language detection and response in multiple languages
 - **Concise Responses**: Updated to provide shorter, more natural responses
